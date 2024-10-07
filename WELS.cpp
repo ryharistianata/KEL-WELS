@@ -241,3 +241,98 @@ void pintar(){
             break;
         }
     } 
+
+	    else if (memilih == "3"){
+		
+			int nomor;
+		
+			cout<<"========================="<<endl;
+         	cout<<"  == 1. Luas Persegi =="<<endl;
+	        cout<<"========================="<<endl;
+	        cout<<""<<endl;
+	        cout<<"      =================================="<<endl;
+	        cout<<"         == 2. Luas Persegi Panjang =="<<endl;
+	        cout<<"      =================================="<<endl;
+	        cout<<""<<endl;
+	        cout<<"==================================="<<endl;
+	        cout<<"  == 3. Kel Segitiga Sama Sisi =="<<endl;
+	        cout<<"==================================="<<endl;
+	        cout<<""<<endl;
+            cout<<"===================================="<<endl;
+	        cout<<"  == pilih nomor berapa == "; cin>>nomor;
+	        
+	        switch (nomor){
+	        	
+	        	case 1:
+	        		int s;
+	        	
+	        	cout << "MASUKAN SISI : "; cin >> s;
+	        	cout << "====================================" << endl;
+	        	cout << "Luas dari persegi tersebut adalah :  " << LuasPersegi(s);
+	        	break;
+	        	
+	        	case 2:
+	        		int p,l;
+	        		
+	        	cout << "MASUKAN PANJANG : "; cin >> p;
+	        	cout << "MASUKAN LEBAR : "; cin >> l;
+	        	cout << "====================================" << endl;
+	        	cout << "Luas dari Persegi Panjang tersebut adalah : " << LuasPersegiPanjang(p,l);
+	        	
+	        	case 3:
+	        		int sisi;
+	        		
+	        	cout << "MASUKAN SISI : "; cin >> sisi;
+	        	cout << "====================================" << endl;
+	        	cout << "Keliling dari segitiga tersebut adalah :  " << KelilingSegitiga(sisi);
+	        	        		
+			}
+	        
+		}        
+		
+	
+}
+ //======================================================================
+int main() {
+    string pil;
+
+    cout << "\n \n ";
+    cout << "==========================" << endl;
+    cout << "  == SELAMAT DATANG ==" << endl;
+    cout << "==========================" << endl;
+
+    cout << "\t =======================" << endl;
+    cout << "\t\t ============ \n\n" << endl;
+
+    cout << "\t ===============" << endl;
+    cout << "\t   == ENTER ==" << endl;
+    cout << "\t ===============" << endl;
+    cin.get();
+    system("cls");
+
+    cout << "====================================" << endl;
+    cout << "   === SELAMAT DATANG DI SINI ===" << endl;
+    cout << "====================================" << endl;
+    cout << "== mau yang mana ? ==" << endl;
+    cout << "=========================" << endl;
+    cout << "== 1. KELOMPOK" << endl;
+    cout << "== 2. SI PINTAR" << endl;
+    cout << "== 3. KELUAR" << endl;
+    cout << "=========================" << endl;
+    cout << "== KETIK NOMOR : "; 
+    cin >> pil;
+    cout << "=========================" << endl;
+    system("cls");
+
+    if (pil == "1") {
+        kel();  
+    } 
+    else if (pil == "2") {
+        pintar();
+    } 
+    else {
+        cout << "TERIMA KASIH" << endl;
+    }
+
+    return 0;
+}
