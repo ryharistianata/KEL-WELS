@@ -28,6 +28,8 @@ float reamurKeCelcius(float re) {
     return (5.0 / 4.0) * re;
 }
 
+
+
 float reamurKeFahrenheit(float re) {
     return (9.0 / 4.0 * re) + 32;
 }
@@ -114,3 +116,128 @@ void kel() {
         cout << "===============================" << endl;
     }
 }
+
+void pintar(){
+	
+		string memilih;
+			cout << "=================================" << endl;
+			cout << "   == WELLCOME TO SI PINTAR ==" << endl;
+			cout << "=================================" << endl;
+			cout << "" << endl;
+			cout << "======================" << endl;
+			cout << "== 1. KALKULATOR  ==" << endl;
+			cout << "== 2. P. SUHU     ==" << endl;
+			cout << "== 3. B. DATAR    ==" << endl;
+			cout << "======================" << endl;
+			cout << "" << endl;
+			cout << "================================" << endl;
+			cout << "== MAU COBA YANG MANA NIH ? "; cin >> memilih;
+			
+			system("cls");
+			
+					if (memilih == "1"){
+			float a,b;
+			string hasil;
+			
+			cout << "================================\n";
+	        cout << "selamat datang di kalkulator\n";
+	        cout << "================================\n";
+	        cout << "" << endl;
+	        cout << "=======================\n";
+	        cout << "== GUNAKAN INI UNTUK ==\n";
+	        cout << "=======================\n";
+	        cout << "==  ( 1 ) TAMBAH     ==\n";
+	        cout << "==  ( 2 ) KURANG     ==\n";
+	        cout << "==  ( 3 ) PERKALIAN  ==\n";
+	        cout << "==  ( 4 ) PEMBAGIAN  ==\n";
+	        cout << "=======================\n";
+	        cout << "== MASUKAN ANGKA AWAL   :"; cin >> a;
+	        cout << "" << endl;
+	        cout << "== MASUKAN ANGKA AKHIR  :"; cin >> b;
+	        cout << "" << endl;
+	        cout << "== PILIH OPERATOR : "; cin >> hasil;
+	        
+	        if (hasil == "1"){
+	        	cout << "= " << a + b << endl;
+			} else if (hasil == "2"){
+				cout << "= " << a - b << endl;
+			} else if (hasil == "3"){
+				cout << "= " << a * b << endl;
+			} else if (hasil == "4"){
+				cout << "= " << a / b << endl;
+			} else {
+				cout << "PILIHAN ANDA SALAH" << endl;
+			}
+	}
+	
+	       else if (memilih == "2"){	
+				int pil;
+				float suhu, hasil;
+				
+				cout << "  == SELAMAT DATANG DI CONVERT SUHU ==" << endl;
+	            cout << "========================================" << endl;
+	            cout << "  == 1. CELCIUS TO FARENHEIT ==" << endl;
+	            cout << "  == 2. CELCIUS TO KELVIN    ==" << endl;
+	            cout << "  == 3. CELCIUS TO REAMUR    ==" << endl;
+            	cout << "  == 4. FARENHEIT TO CELCIUS ==" << endl;
+	            cout << "  == 5. FARENHEIT TO REAMUR  ==" << endl;
+	            cout << "  == 6. REAMUR TO CELCIUS    ==" << endl;
+	            cout << "  == 7. REAMUR TO FARENHEIT  ==" << endl;
+	            cout << "========================================" << endl;
+	            cout << "  == SILAHKAN DIPILIH : "; cin >> pil;
+	        
+	         switch (pil) {
+        case 1:
+            cout << "MASUKAN SUHU AWAL CELCIUS: "; 
+            cin >> suhu;
+            hasil = celciusKeFahrenheit(suhu);
+            cout << "SUHU " << suhu << " CELCIUS = " << hasil << " FAHRENHEIT" << endl;
+            break;
+
+        case 2:
+            cout << "MASUKAN SUHU AWAL CELCIUS: "; 
+            cin >> suhu;
+            hasil = celciusKeKelvin(suhu);
+            cout << "SUHU " << suhu << " CELCIUS = " << hasil << " KELVIN" << endl;
+            break;
+
+        case 3:
+            cout << "MASUKAN SUHU AWAL CELCIUS: "; 
+            cin >> suhu;
+            hasil = celciusKeReamur(suhu);
+            cout << "SUHU " << suhu << " CELCIUS = " << hasil << " REAMUR" << endl;
+            break;
+
+        case 4:
+            cout << "MASUKAN SUHU AWAL FAHRENHEIT: "; 
+            cin >> suhu;
+            hasil = fahrenheitKeCelcius(suhu);
+            cout << "SUHU " << suhu << " FAHRENHEIT = " << hasil << " CELCIUS" << endl;
+            break;
+
+        case 5:
+            cout << "MASUKAN SUHU AWAL FAHRENHEIT: "; 
+            cin >> suhu;
+            hasil = fahrenheitKeReamur(suhu);
+            cout << "SUHU " << suhu << " FAHRENHEIT = " << hasil << " REAMUR" << endl;
+            break;
+
+        case 6:
+            cout << "MASUKAN SUHU AWAL REAMUR: "; 
+            cin >> suhu;
+            hasil = reamurKeCelcius(suhu);
+            cout << "SUHU " << suhu << " REAMUR = " << hasil << " CELCIUS" << endl;
+            break;
+
+        case 7:
+            cout << "MASUKAN SUHU AWAL REAMUR: "; 
+            cin >> suhu;
+            hasil = reamurKeFahrenheit(suhu);
+            cout << "SUHU " << suhu << " REAMUR = " << hasil << " FAHRENHEIT" << endl;
+            break;
+
+        default:
+            cout << "PILIHAN ANDA TIDAK TERSEDIA" << endl;
+            break;
+        }
+    } 
